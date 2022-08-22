@@ -1,5 +1,5 @@
 {
-    "name": "Ball Controls",
+    "name": "Gameplay Controls",
     "maps": [
         {
             "name": "Game Controls",
@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Toggle Camera Move",
+                    "type": "Button",
+                    "id": "42bd972a-e872-4f7f-af46-cc3090ed4b36",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -88,6 +97,17 @@
                     "processors": "",
                     "groups": "Keyboard and Mouse",
                     "action": "Camera Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "24a09b15-55a5-4ea2-8689-96e02fc570a8",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "Toggle Camera Move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

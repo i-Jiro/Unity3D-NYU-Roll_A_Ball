@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class BallController : MonoBehaviour
 {
-    private Vector3 _direction;
+    public Vector3 Direction;
+    
     private Rigidbody _rigidbody;
     [SerializeField] private float _force;
     
@@ -18,14 +20,14 @@ public class BallController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _rigidbody.AddForce(_direction.normalized * _force);
+        _rigidbody.AddForce(Direction.normalized * _force);
     }
 
     void OnPlayerMove(InputValue value)
     {
         Vector2 inputVector = value.Get<Vector2>();
-        _direction.x = -inputVector.x;
-        _direction.y = 0;
-        _direction.z = inputVector.y;
+        Direction.x = -inputVector.x;
+        Direction.y = 0;
+        Direction.z = inputVector.y;
     }
 }
